@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "b588d0eb-2def-4d24-9423-3e8936f3e1f4",
+		"name": "FlaskStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21499348"
+	},
+	"item": [
+		{
+			"name": "items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/items",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"items"
+					]
+				},
+				"description": "Get all available items."
+			},
+			"response": []
+		},
+		{
+			"name": "items/<name>",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/items/table",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"items",
+						"table"
+					]
+				},
+				"description": "Get a data about one item according to name."
+			},
+			"response": []
+		},
+		{
+			"name": "items/<name>",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 15.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/items/<name>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"items",
+						"<name>"
+					]
+				},
+				"description": "StartFragment\n\nPost a new item in the database.\n\nEndFragment"
+			},
+			"response": []
+		},
+		{
+			"name": "items/<name>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 17.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/items/<name>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"items",
+						"<name>"
+					]
+				},
+				"description": "Update or post new item in the database."
+			},
+			"response": []
+		},
+		{
+			"name": "items/<name>",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/items/table",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"items",
+						"table"
+					]
+				},
+				"description": "Delete item from database."
+			},
+			"response": []
+		},
+		{
+			"name": "stores/<name>",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 15.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/items/<name>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"items",
+						"<name>"
+					]
+				},
+				"description": "Post new store in the database."
+			},
+			"response": []
+		},
+		{
+			"name": "stores/<name>",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 15.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/items/<name>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"items",
+						"<name>"
+					]
+				},
+				"description": "Get items and all information about store according name."
+			},
+			"response": []
+		},
+		{
+			"name": "stores/<name>",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 15.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/items/<name>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"items",
+						"<name>"
+					]
+				},
+				"description": "Delete store from the database."
+			},
+			"response": []
+		},
+		{
+			"name": "/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Jane\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "Post new user in the dabase."
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    jsonData.access_token != undefined;\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json()\r",
+							"pm.environment.set(\"jwt_token\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Bambuk\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login the user."
+			},
+			"response": []
+		},
+		{
+			"name": "/refresh",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    jsonData.access_token != undefined;\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json()\r",
+							"pm.environment.set(\"jwt_token\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Bambuk\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/refresh",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"refresh"
+					]
+				},
+				"description": "Refresh the token for the user."
+			},
+			"response": []
+		},
+		{
+			"name": "/user/<user_id>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				},
+				"description": "Get username according user id"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				},
+				"description": "Logout the user."
+			},
+			"response": []
+		}
+	]
+}
